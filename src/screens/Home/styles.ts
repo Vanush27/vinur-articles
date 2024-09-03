@@ -1,14 +1,17 @@
-import {colors} from '@assets/colors';
-import {fonts} from '@assets/fonts';
 import {StyleSheet} from 'react-native';
+import {colors} from '@assets/colors';
+import {IS_IOS} from '@constants';
 
 export function useStyles() {
   const styles = StyleSheet.create({
     container: {
-      paddingTop: 60,
-      flex: 1,
-
-      backgroundColor: colors.backgroundMain,
+      paddingTop: IS_IOS ? 60 : 10,
+      backgroundColor: colors.background,
+      paddingLeft: 15,
+      paddingRight: 15,
+    },
+    errorContainer: {
+      backgroundColor: colors.ping,
     },
   });
 

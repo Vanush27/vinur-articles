@@ -9,9 +9,7 @@
       "DOM",
       "ESNext"
     ],
-    // "moduleResolution": "node",
     "noEmit": true,
-    // "resolveJsonModule": true,
     "target": "ESNext",
     "useUnknownInCatchVariables": true,
     "noImplicitAny": false,
@@ -19,7 +17,7 @@
     "strictNullChecks": true,
     "strict": true,
     "allowSyntheticDefaultImports": true,
-    /* Completeness */
+
     "skipLibCheck": true,
     "baseUrl": ".",
     "paths": {
@@ -35,21 +33,14 @@
       "@components/*": [
         "./src/components/*"
       ],
-      "@i18n/*": [
-        "./src/i18n/*"
-      ],
       "@navigators/*": [
         "./src/navigators/*"
       ],
       "@redux/*": [
         "./src/redux/*"
       ],
-      "@theme/*": [
-        "./src/theme/*"
-      ],
       "@constants": ["./src/constants"],
       "@hooks": ["./src/hooks"],
-      "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
       "@ui-modules": ["./src/ui-modules"],
     }
@@ -64,7 +55,6 @@
   "include": [
     "src/**/*",
     "app.config.js",
-    // "configs/jest/jest-setup.config.js",
-    // "polifills"
+    "declarations/*.d.ts",
   ]
 }

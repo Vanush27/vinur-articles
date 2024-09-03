@@ -1,8 +1,7 @@
+import React from 'react';
 import RootNavigator from '@navigators/RootNavigator';
 import {AppContextsProvider} from './AppContextsProvider';
 import 'react-native-reanimated';
-
-import React from 'react';
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 import AsyncStorage from '@react-native-async-storage/async-storage';
 
-// import articlesReducer from './slices/articles';
+import articlesReducer from './slices/articlesSlice';
 
 import {
   FLUSH,
@@ -20,7 +20,7 @@ const persistConfig = {
 };
 
 const rootReducer = combineReducers({
-  // images: articlesReducer,
+  articles: articlesReducer,
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

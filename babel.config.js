@@ -2,6 +2,20 @@ module.exports = {
   presets: ['module:@react-native/babel-preset'],
   plugins: [
     [
+      'module:react-native-dotenv',
+      {
+        envName: 'APP_ENV',
+        moduleName: '@env',
+        path: '.env.dev',
+        blocklist: null,
+        allowlist: null,
+        safe: false,
+        allowUndefined: false,
+        verbose: false,
+      },
+    ],
+    
+    [
       'module-resolver',
       {
         root: ['./src'],
@@ -16,10 +30,10 @@ module.exports = {
           '.json',
         ],
         alias: {
+          '@api': './src/api',
           '@assets': './src/assets',
           '@types/*': './src/types/*',
           '@assets/*': './src/assets/*',
-          '@firebase/*': './src/firebase/*',
           '@screens': './src/screens',
           '@redux': './src/redux',
           '@hooks': './src/hooks',
